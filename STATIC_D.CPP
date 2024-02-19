@@ -1,0 +1,36 @@
+#include<iostream.h>
+#include<conio.h>
+class A{
+int p;
+static int q;
+public:
+A();
+void incr(void);
+void display(void);
+};
+A::A()
+{
+p=5;
+}
+int A::q=10;
+void A::incr()
+{
+p++;
+q++;
+}
+void A::display()
+{
+cout<<p<<"\t"<<q<<endl;
+}
+int main()
+{
+A a1,a2,a3;
+a1.incr();
+a1.display();
+a2.incr();
+a2.display();
+a3.incr();
+a3.display();
+return(0);
+getch();
+}

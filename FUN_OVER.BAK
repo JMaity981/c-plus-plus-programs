@@ -1,0 +1,18 @@
+#include<iostream.h>
+#include<conio.h>
+int function(int a,int b)
+{
+return(a*b);
+}
+float function(float a,float b)
+{
+return(a+b);
+}
+int main()
+{
+int x=2,y=5;
+float m=2.5,n=3.8;
+cout<<function(x,y)<<endl;
+cout<<function(m,n)<<endl;
+return(0);
+}

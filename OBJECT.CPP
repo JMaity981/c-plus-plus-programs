@@ -1,0 +1,36 @@
+#include<iostream.h>
+#include<conio.h>
+class time
+{
+  int hour,min;
+  public:
+  void input(void);
+  void sum(time,time);
+};
+void time::input()
+{
+ cout<<"enter hours"<<endl;
+ cin>>hour;
+ cout<<"enter the minutes"<<endl;
+ cin>>min;
+}
+void time::sum(time t1,time t2)
+{
+ time t3;
+ t3.min=t1.min+t2.min;
+ t3.hour=t3.min/60;
+ t3.min=t3.min%60;
+ t3.hour=t3.hour+t1.hour+t2.hour;
+ cout<<"total time="<<t3.hour<<":"<<t3.min;
+ }
+ void main()
+ {
+   clrscr();
+   cout<<endl;
+   time t1,t2;
+   t1.input();
+   t2.input();
+   time t3;
+   t3.sum(t1,t2);
+   getch();
+}

@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+class evenodd
+{
+ private:
+ int n;
+ public:
+ void input(void);
+ void even(void);
+ };
+ void evenodd::input()
+ {
+  cout<<"enter any number"<<"\n";
+  cin>>n;
+ }
+ void evenodd::even()
+ {
+  if(n%2==0)
+  cout<<"this number is even"<<"\n";
+  else
+  cout<<"this number is odd"<<"\n";
+ }
+ void main()
+ {
+  evenodd obj;
+  obj.input();
+  obj.even();
+  getch();
+ }

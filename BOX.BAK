@@ -1,0 +1,90 @@
+#include<iostream.h>
+#include<conio.h>
+class box
+{
+  private:
+    int length;
+    int bredth;
+    int hight;
+  public:
+    void getdata()
+    {
+      cout<<"Enter length,bredth,hight:  ";
+    cin>>length>>bredth>>hight;
+    }
+    void area(void)
+    {
+      int a;
+      a=2*(length*bredth+bredth*hight+hight*bredth);
+      cout<<"Area="<<a<<endl;
+    }
+    void volume(void)
+    {
+      int v;
+      v=length*bredth*hight;
+      cout<<"Volume="<<v<<endl;
+    }
+    void operator++();
+    void display();
+    void operator--();
+    void operator==(box);
+    void operator=(box);
+};
+  void box::operator++()
+  {
+    length++;
+    bredth++;
+    hight++;
+  }
+  void box::display()
+  {
+    cout<<"Length="<<length<<endl;
+    cout<<"Bredth="<<bredth<<endl;
+    cout<<"hight="<<hight<<endl;
+  }
+  void box::operator--()
+  {
+   length--;
+   bredth--;
+   hight--;
+  }
+  void box::operator==(box x)
+  {
+    if(length==x.length && bredth==x.bredth && hight==x.hight)
+    cout<<"Two box are equal"<<endl;
+    else
+    cout<<"Two box are difference"<<endl;
+  }
+  void box::operator=(box x)
+  {
+     length=x.length;
+     bredth=x.bredth;
+     hight=x.hight;
+  }
+  void main()
+  {
+    clrscr();
+    box s,p;
+    cout<<endl;
+    cout<<"Enter 1st box details"<<endl;
+    s.getdata();
+    s.area();
+    s.volume();
+    cout<<"Increasing......."<<endl;
+    ++s;
+    s.display();
+    cout<<"Decreasing......"<<endl;
+    --s;
+    s.display();
+    cout<<endl;
+    cout<<"Enter 2nd box details"<<endl;
+    p.getdata();
+    p==s;
+    box q;
+    q=p;
+    cout<<endl;
+    cout<<"3rd box details are"<<endl;
+    q.display();
+    getch();
+  }
+

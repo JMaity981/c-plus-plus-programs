@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+int main()
+{
+int gdrive=DETECT,gmode;
+setbkcolor(GREEN);
+setcolor(RED);
+initgraph(&gdrive,&gmode,"c:\\turboc3\\bgi");
+moveto(247,360);
+arc(202,360,0,180,45);
+arc(425,360,0,180,45);
+moveto(157,360);
+lineto(67,360);
+lineto(67,200);
+lineto(157,200);
+lineto(225,80);
+lineto(405,180);
+lineto(470,200);
+lineto(580,240);
+lineto(580,360);
+lineto(470,360);
+getch();
+closegraph();
+return 0;
+}

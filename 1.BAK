@@ -1,0 +1,31 @@
+#include<iostream.h>
+#include<conio.h>
+class data
+{
+int age;
+char name[20];
+public:
+void getdata();
+void putdata();
+};
+void data::getdata()
+{
+cout<<"Enter the age"<<endl;
+cin>>age;
+cout<<"Enter the name"<<endl;
+cin>>name;
+}
+void data::putdata()
+{
+cout<<"Age is: "<<age<<endl;
+cout<<"Name is: "<<name<<endl;
+}
+int main()
+{
+clrscr();
+data obj;
+obj.getdata();
+obj.putdata();
+getch();
+return 0;
+}

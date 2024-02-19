@@ -1,0 +1,14 @@
+#include<iostream.h>
+#include<conio.h>
+inline int add(int a,int b,int c)
+{
+return(a+b+c);
+}
+int main()
+{
+cout<<"addition of (20,20,40):"<<add(20,30,40)<<endl;
+cout<<"addition of (10,20,30):"<<add(10,20,30)<<endl;
+cout<<"addition of (30,40,50):"<<add(30,40,50)<<endl;
+getch();
+return(0);
+}

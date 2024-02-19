@@ -1,0 +1,33 @@
+#include<iostream.h>
+#include<conio.h>
+class evenadd
+{
+int n,i,s;
+public:
+evenadd()
+{
+ s=0;
+}
+ void getdata()
+ {
+  cout<<"enter the value of n"<<endl;
+  cin>>n;
+ }
+ void sum()
+ {
+   for(i=2;i<=n;i++)
+   {
+    if(i%2==0)
+    s=s+i;
+   }
+    cout<<"sum = "<<s<<endl;
+  }
+};
+void main()
+{
+ clrscr();
+ evenadd obj;
+ obj.getdata();
+ obj.sum();
+ getch();
+}

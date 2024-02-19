@@ -1,0 +1,26 @@
+  # include<iostream.h>
+  # include<conio.h>
+  int main()
+  {
+     int a[20],i,j,n,temp;
+     clrscr();
+     cout<<"How many eliments:";
+     cin>>n;
+     cout<<"Enter array eliments:";
+     for(i=0;i<n;i++)
+     cin>>a[i];
+     for(i=0;i<n-1;i++)
+     for(j=i+1;j<n;j++)
+     if(a[i]>a[j])
+     {
+        temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+     }
+     cout<<"After sorting by Selection Sort:";
+     for(i=0;i<n;i++)
+     cout<<"  "<<a[i];
+     getch();
+	 return(0);
+  }
+

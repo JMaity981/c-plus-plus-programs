@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<conio.h>
+class method
+{
+   public:
+   static int add(int,int);
+};
+int method::add(int a,int b)
+{
+   return(a+b);
+}
+void main()
+{
+   method a;
+   int r;
+   r=a.add(30,40);
+   cout<<r;
+   getch();
+}

@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+class xyz
+{
+int x;
+public:
+xyz();
+~xyz();
+void display();
+};
+xyz::xyz()
+{
+x=9;
+}
+xyz::~xyz()
+{
+cout<<"Object is destroyed";
+}
+void xyz::display()
+{
+cout<<x;
+}
+int main()
+{
+xyz abc;
+abc.display();
+getch();
+return 0;
+}

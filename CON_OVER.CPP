@@ -1,0 +1,46 @@
+#include<iostream.h>
+#include<conio.h>
+class add
+{
+ int x;
+ int y;
+ public:
+ add()
+ {
+ x=0;
+ y=0;
+ }
+ add(int m,int n)
+ {
+  x=m;
+  y=n;
+ }
+ add(add &c)
+ {
+  x=c.x;
+  y=c.y;
+  }
+  void display()
+  {
+  cout<<"x="<<x<<endl;
+  cout<<"y="<<y<<endl;
+  }
+};
+void main()
+{
+  clrscr();
+  cout<<endl;
+  add c1;
+  add c2(5,2);
+  add c3(c2);
+  cout<<"default:"<<endl;
+  c1.display();
+  cout<<"parametarized"<<endl;
+  c2.display();
+  cout<<"copy:"<<endl;
+  c3.display();
+  getch();
+}
+
+
+

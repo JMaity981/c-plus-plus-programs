@@ -1,0 +1,16 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ float amount;
+ float value(float p,int t,float r=2.3);
+ amount=value(5000,5);
+ cout<<"final value="<<amount;
+ getch();
+}
+float value(float p,int t,float r)
+{
+ float sum;
+ sum=(p*r*t/100);
+ return(sum);
+}

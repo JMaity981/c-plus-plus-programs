@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+class Employee{
+char name;
+int age;
+public:
+void getdata(void);
+void putdata(void);
+};
+void Employee::getdata(void)
+{
+cout<<"Enter the name and age";
+cin>>name>>age;
+}
+void Employee::putdata(void)
+{
+cout<<name<<"\t"<<age<<endl;
+}
+int main()
+{
+Employee e[5];
+int i;
+for(i=0;i<5;i++)
+e[i].getdata();
+for(i=0;i<5;i++)
+e[i].putdata();
+getch();
+return(0);
+}

@@ -1,0 +1,54 @@
+#include<iostream.h>
+#include<conio.h>
+class student
+{
+  int roll;
+  public:
+  void getroll()
+  {
+   cout<<"enter the roll number"<<endl;
+   cin>>roll;
+  }
+  void putroll()
+  {
+   cout<<"roll number ="<<roll<<endl;
+  }
+};
+class test:public student
+{
+ protected:
+  int m1,m2;
+  public:
+  void getmarks()
+  {
+    cout<<"enter your two subject marks"<<endl;
+    cin>>m1>>m2;
+  }
+  void putmarks()
+  {
+    cout<<"your 1st subject marks="<<m1<<endl;
+    cout<<"your 2nd subject marks="<<m2<<endl;
+  }
+};
+class result:public test
+{
+ int m3;
+ public:
+ void total()
+ {
+  m3=m1+m2;
+ cout<<"total result="<<m3<<endl;
+ }
+ };
+ void main()
+{
+ clrscr();
+ cout<<endl;
+ result s1;
+ s1.getroll();
+ s1.getmarks();
+ s1.putroll();
+ s1.putmarks();
+ s1.total();
+ getch();
+}

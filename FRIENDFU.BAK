@@ -1,0 +1,53 @@
+#include<iostream.h>
+#include<conio.h>
+class b;
+class a
+{
+  int id;
+  public:
+  void getdata(int x)
+  {
+     id=x;
+   }
+   void display()
+   {
+     cout<<"the value of id="<<id<<endl;
+    }
+    friend void exchange(a&,b&);
+};
+class b
+{
+  int id1;
+  public:
+  void getdata(int y)
+  {
+    id1=y;
+   }
+   void display()
+   {
+   cout<<"the value of id1="<<id1;
+   }
+   friend void exchange(a&,b&);
+};
+void exchange(a&p,b&q)
+{
+  int temp;
+  temp=p.id;
+  p.id=q.id1;
+  q.id1=temp;
+}
+void main()
+{
+clrscr();
+a c1;
+b c2;
+c1.getdata(100);
+c2.getdata(200);
+cout<<"before exchanging:"<<endl;
+c1.display();
+c2.display();
+cout<<"after exchanging:"<<endl;
+c1.display();
+c2.display();
+getch();
+}

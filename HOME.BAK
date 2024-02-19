@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+#include<graphics.h>
+void dda(int,int,int,int);
+void main()
+{
+int gd=DETECT,gm,x1,x2,y1,y2;
+initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+dda(60,60,160,60);
+dda(160,60,190,100);
+dda(30,100,190,100);
+dda(30,100,60,60);
+dda(60,100,60,130);
+dda(160,100,160,130);
+dda(30,130,190,130);
+getch();
+}
+void dda(int x1,int y1,int x2,int y2)
+{
+int dx,dy,step,i;
+float x,y,xinc,yinc;
+dx=x2-x1;
+dy=y2-y1;
+if(abs(dx)>abs(dy))
+step=dx;
+else
+step=dy;
+xinc=(float)dx/step;
+yinc=(float)dy/step;
+x=x1;
+y=y1;
+putpixel(x,y,GREEN);
+for(i=0;i<=step;i++)
+{
+  x=x+xinc;
+  y=y+yinc;
+  putpixel(floor(x),floor(y),GREEN);
+}
+}
+
